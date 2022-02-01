@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -26,6 +26,10 @@ requirements:
 test:
   imports:
     - RTFDE
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/seamustuohy/RTFDE
