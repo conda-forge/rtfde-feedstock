@@ -22,6 +22,7 @@ requirements:
     - lark-parser >=0.11
     - oletools >=0.56
     - python >=3.6
+    - lark
 
 test:
   imports:
