@@ -1,5 +1,5 @@
 {% set name = "RTFDE" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/RTFDE-{{ version }}.tar.gz
-  sha256: 12215ee59856208010b9200c19afe0f9fa13a3fb39f44015979299c248cbacd7
+  sha256: 9e43485e79b2dd1018127735d8134f65d2a9d73af314d2a101f10346333b241e
 
 build:
   noarch: python
