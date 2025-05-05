@@ -1,18 +1,18 @@
 {% set name = "rtfde" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/RTFDE-{{ version }}.tar.gz
-  sha256: 9e43485e79b2dd1018127735d8134f65d2a9d73af314d2a101f10346333b241e
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ea2653fb163ef1e9fdd1b0849bef88b0ba82537f860d4aca5b2c49f556efaaaa
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - lark ==1.1.8
+    - lark >=1.1.8,<1.2.dev0
     - oletools >=0.56
 
 test:
